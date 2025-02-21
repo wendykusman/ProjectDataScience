@@ -1,5 +1,5 @@
 # Case 1 = Sales Force Training
-# 1. Buatlah DataFrame 1 kolom dengan 25 baris bernama ‘TransactionAmount’
+# 1. Buatlah DataFrame 1 kolom dengan 25 baris bernama â€˜TransactionAmountâ€™
 import numpy as np
 data = [100,150,50,100,130,120,100,85,70,150,150,120,50,100,100,140,90,150,50,90,120,100,110,75,65]
 
@@ -11,7 +11,7 @@ TransactionAmount = np.sort(data)
 print('data setelah diurutkan :')
 print(TransactionAmount)
 
-# 2. Buatlah analisis measure of central tendency dari data ‘TransactionAmount’
+# 2. Buatlah analisis measure of central tendency dari data â€˜TransactionAmountâ€™
 from scipy import stats
 
 # menghitung mean, median, dan mode
@@ -23,7 +23,7 @@ print(f'Mean : {mean}')
 print(f'Median : {median}')
 print(f'Mode : {mode}')
 
-# 3. Lakukan juga analisis measure of variability dari data ‘TransactionAmount’
+# 3. Lakukan juga analisis measure of variability dari data â€˜TransactionAmountâ€™
 range_value = np.max(TransactionAmount) - np.min(TransactionAmount)
 print(f'Range :{range_value}')
 q1 = np.percentile(TransactionAmount,25)
