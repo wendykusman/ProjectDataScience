@@ -81,7 +81,7 @@ models = {
     "Random Forest": RandomForestClassifier(),
     "Gradient Boosting": GradientBoostingClassifier()
 }
-"""
+
 # Melatih dan menguji setiap model
 for name, model in models.items():
     model.fit(X_train, y_train)
@@ -92,8 +92,8 @@ for name, model in models.items():
     print(classification_report(y_test, y_pred))
     print("Confusion Matrix:")
     print(confusion_matrix(y_test, y_pred))
-"""
 
+"""
 # Definisikan parameter grid untuk GridSearchCV
 param_grid = {
     'n_estimators': [100, 200, 300],
@@ -126,6 +126,7 @@ cr = classification_report(y_test, y_pred)
 print("Classification Report:")
 print(cr)
 
+
 # ROC Curve
 fpr, tpr, thresholds = roc_curve(y_test, y_prob)
 roc_auc = auc(fpr, tpr)
@@ -145,3 +146,4 @@ plt.show()
 feature_importance = best_model.feature_importances_
 features = X_train.columns
 importance_df = pd.DataFrame({'Feature': features, 'Importance': feature_importance}).sort_values(by='Importance', ascending=False)
+"""
