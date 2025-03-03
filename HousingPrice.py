@@ -183,19 +183,22 @@ plt.legend()
 plt.grid(True)
 plt.show()
 """
-"""
+
 # GarageArea dan SalePrice
+# Filter data untuk GarageArea > 0
+filtered_data = data[data['GarageArea']>0]
+
 # Membuat plot
 plt.figure(figsize=(10, 6))
-plt.scatter(data['GarageArea'], data['SalePrice'], alpha=0.5)
+plt.scatter(filtered_data['GarageArea'], filtered_data['SalePrice'], alpha=0.5)
 plt.title('GarageArea vs. SalePrice')
 plt.xlabel('GarageArea (sq ft)')
 plt.ylabel('SalePrice (USD)')
 plt.legend()
 plt.grid(True)
 plt.show()
-"""
+
 correlationSGr = data['SalePrice'].corr(data['GrLivArea'])
 print (f'Korelasi antara SalePrice dan GrLivArea : {correlationSGr:.2f}')
-correlationSGa = data['SalePrice'].corr(data['GarageArea'])
+correlationSGa = filtered_data['SalePrice'].corr(filtered_data['GarageArea'])
 print (f'Korelasi antara SalePrice dan GarageArea : {correlationSGa:.2f}')
